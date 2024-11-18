@@ -3,16 +3,18 @@ package ScientificCalculatorOOP.Calculators;
 import ScientificCalculatorOOP.DataClasses.Motion;
 import ScientificCalculatorOOP.DataClasses.Physics;
 import ScientificCalculatorOOP.Interfaces.CalculatorInterface;
+import ScientificCalculatorOOP.Interfaces.DataInput;
 
 import java.util.Scanner;
 
-public class ForceCalculator implements CalculatorInterface {
+public class ForceCalculator implements CalculatorInterface, DataInput {
     static Scanner scanner = new Scanner(System.in);
-    static Motion motion = new Motion();
+    ;
 
-    public static Physics insertDataForForce() {
+    @Override
+    public Physics insertData() {
         Physics physics = new Physics();
-
+        Motion motion = new Motion();
         System.out.print("Enter Mass: ");
         Double mass = scanner.nextDouble();
         physics.setMass(mass);
@@ -28,7 +30,7 @@ public class ForceCalculator implements CalculatorInterface {
 
     @Override
     public void calculate() {
-        Physics physicsData = insertDataForForce();
+        Physics physicsData = insertData();
         Double force = physicsData.getMass() * physicsData.getMotionData().getAcceleration();   //access Motion object first within Physics then acceleration that is stored in Motion
         System.out.println("Force = " + force + physicsData.getMotionData().getUnit());
     }
