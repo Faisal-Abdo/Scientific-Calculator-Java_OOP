@@ -16,11 +16,11 @@ public class FinalVelocityCalculator implements CalculatorInterface {
         System.out.print("Enter Acceleration: ");
         Double acceleration = scanner.nextDouble();
         motion.setAcceleration(acceleration);
-        System.out.println("Enter Time: ");
+        System.out.print("Enter Time: ");
         Double time = scanner.nextDouble();
         motion.setTime(time);
-
-        motion.setUnit("m/s");
+        System.out.print("Enter unit: ");
+        motion.setUnit(scanner.nextLine());
 
         return motion;
     }
@@ -41,5 +41,11 @@ public class FinalVelocityCalculator implements CalculatorInterface {
         // formula = initial V + ( a * t )
         Double finalVelocity = motionData.getInitialVelocity() + (motionData.getAcceleration() * motionData.getTime());
         System.out.println("Final velocity = " + finalVelocity + motionData.getUnit());
+    }
+
+    public static void calculateDisplacement() {
+        Motion motionData = insertDataForVelocity();
+        Double displacement = (motionData.getInitialVelocity() * motionData.getTime()) + ((motionData.getAcceleration() / 2) * Math.pow(motionData.getTime(), 2));
+        System.out.println("Displacement = " + displacement + motionData.getUnit());
     }
 }
