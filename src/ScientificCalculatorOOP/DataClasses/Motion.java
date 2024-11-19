@@ -1,12 +1,10 @@
 package ScientificCalculatorOOP.DataClasses;
 
-import java.util.List;
 
-public class Motion {
+public class Motion extends BaseData {
     private Double initialVelocity;
     private Double acceleration;
     private Double time;
-    private List<BaseData> baseDataList;
 
     public Double getInitialVelocity() {
         return initialVelocity;
@@ -32,11 +30,12 @@ public class Motion {
         this.time = time;
     }
 
-    public List<BaseData> getBaseDataList() {
-        return baseDataList;
-    }
-
-    public void setBaseDataList(List<BaseData> baseDataList) {
-        this.baseDataList = baseDataList;
+    @Override
+    public String toString() {
+        return "Motion{" +
+                "initialVelocity=" + initialVelocity +
+                ", acceleration=" + acceleration +
+                ", time=" + time +
+                '}';
     }
 }

@@ -2,7 +2,17 @@ package ScientificCalculatorOOP.DataClasses;
 
 
 public class BaseData {
-    private String id;
+   /* private String id;
+    private String description;*/
+    private String unit;
+
+   /* public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getDescription() {
         return description;
@@ -10,7 +20,7 @@ public class BaseData {
 
     public void setDescription(String description) {
         this.description = description;
-    }
+    }*/
 
     public String getUnit() {
         return unit;
@@ -20,15 +30,12 @@ public class BaseData {
         this.unit = unit;
     }
 
-    public String getId() {
-        return id;
+    @Override
+    public String toString() {
+        return "BaseData{" +
+                /*"id='" + id + '\'' +
+                ", description='" + description + '\'' +*/
+                ", unit='" + unit + '\'' +
+                '}';
     }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    private String description;
-    private String unit;
-
 }

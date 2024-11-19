@@ -19,4 +19,12 @@ public class Density extends BaseData {
     public void setPhysics(Physics physics) {
         this.physics = physics;
     }
+
+    @Override
+    public String toString() {
+        return "Density{" +
+                "volume=" + volume +
+                ", physics=" + physics +
+                '}';
+    }
 }

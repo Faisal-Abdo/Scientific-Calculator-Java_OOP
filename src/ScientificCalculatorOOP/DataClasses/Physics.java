@@ -1,20 +1,15 @@
 package ScientificCalculatorOOP.DataClasses;
 
 public class Physics {
+    private Double mass;
+    private Motion motionData;
+
     public Double getMass() {
         return mass;
     }
 
     public void setMass(Double mass) {
         this.mass = mass;
-    }
-
-    public Double getAcceleration() {
-        return acceleration;
-    }
-
-    public void setAcceleration(Double acceleration) {
-        this.acceleration = acceleration;
     }
 
     public Motion getMotionData() {
@@ -25,7 +20,11 @@ public class Physics {
         this.motionData = motionData;
     }
 
-    private Double mass;
-    private Double acceleration;
-    private Motion motionData;
+    @Override
+    public String toString() {
+        return "Physics{" +
+                "mass=" + mass +
+                ", motionData=" + motionData +
+                '}';
+    }
 }

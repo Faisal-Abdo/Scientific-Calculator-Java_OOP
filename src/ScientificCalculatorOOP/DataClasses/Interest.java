@@ -1,31 +1,23 @@
 package ScientificCalculatorOOP.DataClasses;
 
-public class Interest {
-    private Integer principal;
-    private Float rate;
+public class Interest extends BaseData {
+    private Double principal;
+    private Double rate;
     private Double time;
 
-    public Physics getPhysics() {
-        return physics;
-    }
-
-    public void setPhysics(Physics physics) {
-        this.physics = physics;
-    }
-
-    public Integer getPrincipal() {
+    public Double getPrincipal() {
         return principal;
     }
 
-    public void setPrincipal(Integer principal) {
+    public void setPrincipal(Double principal) {
         this.principal = principal;
     }
 
-    public Float getRate() {
+    public Double getRate() {
         return rate;
     }
 
-    public void setRate(Float rate) {
+    public void setRate(Double rate) {
         this.rate = rate;
     }
 
@@ -37,6 +29,12 @@ public class Interest {
         this.time = time;
     }
 
-    private Physics physics;
-
+    @Override
+    public String toString() {
+        return "Interest{" +
+                "principal=" + principal +
+                ", rate=" + rate +
+                ", time=" + time +
+                '}';
+    }
 }

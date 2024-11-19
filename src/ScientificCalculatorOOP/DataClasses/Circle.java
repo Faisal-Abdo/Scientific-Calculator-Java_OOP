@@ -1,8 +1,10 @@
 package ScientificCalculatorOOP.DataClasses;
 
-import java.util.List;
 
 public class Circle {
+    private Double radius;
+    private BaseData baseData;
+
     public Double getRadius() {
         return radius;
     }
@@ -11,14 +13,19 @@ public class Circle {
         this.radius = radius;
     }
 
-    public List<BaseData> getBaseDataList() {
-        return baseDataList;
+    public BaseData getBaseData() {
+        return baseData;
     }
 
-    public void setBaseDataList(List<BaseData> baseDataList) {
-        this.baseDataList = baseDataList;
+    public void setBaseData(BaseData baseData) {
+        this.baseData = baseData;
     }
 
-    private Double radius;
-    private List<BaseData> baseDataList;
+    @Override
+    public String toString() {
+        return "Circle{" +
+                "radius=" + radius +
+                ", baseData=" + baseData +
+                '}';
+    }
 }

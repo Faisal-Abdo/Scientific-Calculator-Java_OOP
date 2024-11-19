@@ -13,14 +13,12 @@ public class FinalVelocityCalculator implements CalculatorInterface, DataInput {
     public Motion insertData() {
         Motion motion = new Motion();
         System.out.print("Enter initial Velocity: ");
-        Double velocity = scanner.nextDouble();
-        motion.setInitialVelocity(velocity);
+        motion.setInitialVelocity(scanner.nextDouble());
         System.out.print("Enter Acceleration: ");
-        Double acceleration = scanner.nextDouble();
-        motion.setAcceleration(acceleration);
+        motion.setAcceleration(scanner.nextDouble());
         System.out.print("Enter Time: ");
-        Double time = scanner.nextDouble();
-        motion.setTime(time);
+        motion.setTime(scanner.nextDouble());
+        scanner.nextLine();
         System.out.print("Enter unit: ");
         motion.setUnit(scanner.nextLine());
 
@@ -35,7 +33,7 @@ public class FinalVelocityCalculator implements CalculatorInterface, DataInput {
         System.out.println("Final velocity = " + finalVelocity + motionData.getUnit());
     }
 
-    private static Double getSquare(Double number) {
+    public static Double getSquare(Double number) {
         return number * number;
     }
 

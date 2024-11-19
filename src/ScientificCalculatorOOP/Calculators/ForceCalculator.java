@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 public class ForceCalculator implements CalculatorInterface, DataInput {
     static Scanner scanner = new Scanner(System.in);
-    ;
 
     @Override
     public Physics insertData() {
